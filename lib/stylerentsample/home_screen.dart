@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:networking_project/api/google_signin.dart';
-import 'logedin_screen.dart';
+import 'user_profile_screen.dart';
 
 class SRSigninScreen extends StatelessWidget {
   SRSigninScreen({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class SRSigninScreen extends StatelessWidget {
     if (user == null) {
       Get.snackbar('Message', 'Sign in failed');
     } else {
-      Get.to(() => LoggedInScreen(userdata: user));
+      Get.to(() => UserProfileScreen(userdata: user));
     }
   }
 
